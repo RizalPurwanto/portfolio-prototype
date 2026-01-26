@@ -4,10 +4,11 @@ import { RiRefreshFill } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { NavCard } from "@/components/NavCard";
 import { NavCardProps } from "@/types/NavCardPropTypes";
+import { CardNavigator } from "@/components/CardNavigator";
 
 export default function Home() {
 
-  const NavItems: NavCardProps[] = [
+  const navItems: NavCardProps[] = [
     {
       cardStyle: {
         backgroundImage: `
@@ -18,7 +19,7 @@ export default function Home() {
         backgroundSize: "44px 44px",
 
       },
-      icon: <CgProfile className="text-[40px] md:text-[80px] xl:text-[200px]" />,
+      icon: <CgProfile className="text-[40px] md:text-[80px] " />,
       name: "About",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eaque?"
 
@@ -33,7 +34,7 @@ export default function Home() {
         backgroundSize: "44px 44px",
 
       },
-      icon: <CgProfile className="text-[40px] md:text-[80px] xl:text-[200px]" />,
+      icon: <CgProfile className="text-[40px] md:text-[80px] " />,
       name: "About",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eaque?"
 
@@ -48,7 +49,7 @@ export default function Home() {
         backgroundSize: "44px 44px",
 
       },
-      icon: <CgProfile className="text-[40px] md:text-[80px] xl:text-[200px]" />,
+      icon: <CgProfile className="text-[40px] md:text-[80px] " />,
       name: "About",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eaque?"
 
@@ -63,7 +64,7 @@ export default function Home() {
         backgroundSize: "44px 44px",
 
       },
-      icon: <CgProfile className="text-[40px] md:text-[80px] xl:text-[200px]" />,
+      icon: <CgProfile className="text-[40px] md:text-[80px]" />,
       name: "About",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eaque?"
 
@@ -78,7 +79,7 @@ export default function Home() {
         backgroundSize: "44px 44px",
 
       },
-      icon: <CgProfile className="text-[40px] md:text-[80px] xl:text-[200px]" />,
+      icon: <CgProfile className="text-[40px] md:text-[80px]" />,
       name: "About",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eaque?"
 
@@ -106,7 +107,7 @@ export default function Home() {
               }
               }
               icon={
-                <CgProfile className="text-[40px] md:text-[80px] xl:text-[200px]" />
+                <CgProfile className="text-[40px] md:text-[80px] " />
               }
               name="About"
               text={"  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eaque?"}
@@ -115,9 +116,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="fixed bg-blue-200 h-[50px] w-full left-0 bottom-0">
-          nav
-        </div>
+       
+        <CardNavigator
+          navItems={navItems}
+        />
       </main>
     </div>
   );
