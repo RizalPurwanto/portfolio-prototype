@@ -24,7 +24,8 @@ export function CardNavigator({
 
     return <div
         style={{
-            bottom: "calc(-60vh)"
+            // bottom: "calc(-90vh)"
+            top: "calc(140vh)"
         }}
         className="fixed  h-[50px] w-full h-auto flex flex-row justify-center left-0 gap-2 bottom-0 items-center">
 
@@ -39,12 +40,12 @@ export function CardNavigator({
                 const y = Math.cos(angle * index) * RADIUS * -1
 
                 const defAngle = angle * index; //default angle for each card, when whole hand splayed like a fan 
-                const hovAngle = maxAngle / 2; //this makes the card upright/vertical
+                const hovAngle = maxAngle / 2; //this makes the card upright/vertical on hover
 
                 return <NavCard
                     key={item.name + index}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
+                    onMouseEnter={() => setHoveredIndex(index)} // on hover set the index to change card angle to upright
+                    onMouseLeave={() => setHoveredIndex(null)} // on leave set to null to revert card position
                     cardStyle={{
                         ...item.cardStyle,
                         position: "absolute",
